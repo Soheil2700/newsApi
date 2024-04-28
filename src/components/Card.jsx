@@ -4,7 +4,7 @@ const Card = ({ title, urlToImage, url, author, publishedAt }) => {
   return (
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       {urlToImage && (
-        <a href="#">
+        <a href={url} target="_blank">
           <img
             class="rounded-t-lg h-[150px] w-full object-cover"
             src={urlToImage}
