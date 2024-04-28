@@ -32,7 +32,9 @@ const Guardian = () => {
     getData(form);
   };
   useEffect(() => {
+    const controller = new AbortController();
     getData(form);
+    return () => controller.abort();
   }, []);
   return (
     <div className="App">
